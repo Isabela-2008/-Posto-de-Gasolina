@@ -66,7 +66,7 @@ insert into bombas (descricao) values
 insert into funcionarios (nome, cargo, turno, telefone) values 
 ("Isabela","chefe","manha","111111111111"),
 ("Cintya","caixa","tarde","222222222222"),
-("Ricrado","faxineiro","noite","333333333333");
+("Ricardo","faxineiro","noite","333333333333");
 
 insert into clientes (nome, telefone, email) values
 ("Eduardo","444444444444","eduardo@gmail.com"),
@@ -74,9 +74,9 @@ insert into clientes (nome, telefone, email) values
 ("Rafaely","666666666666","rafaely@gmail.com");
 
 insert into abastecimentos(volume,valor_total,data_abastecimento) values
-("1",14,"11-27-24 18:00"),
-("2",16,"11-20-24 12:00"),
-("3",16,"11-07-24 15:00");
+("1",14,"2024-11-20 18:00"),
+("2",16,"2024-11-23 12:00"),
+("3",16,"2024-11-27 15:00");
 
 insert into servicos(descricao, preco) values
 ("encher o tanque",3),
