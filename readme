@@ -1,0 +1,78 @@
+Banco de Dados Posto de Gasolina
+
+Este projeto envolve a criação de um banco de dados para um posto de gasolina, chamado Posto de Gasolina. O banco de dados é projetado para gerenciar informações sobre combustíveis, bombas de abastecimento, funcionários, clientes, abastecimentos, serviços oferecidos e transações realizadas. Os principais componentes do banco de dados incluem:
+
+Combustíveis: Uma tabela para armazenar os tipos de combustíveis disponíveis e seus preços por litro.
+Bombas: Uma tabela para registrar as bombas de abastecimento, associando cada bomba a um tipo de combustível.
+Funcionários: Uma tabela para armazenar informações dos funcionários do posto, incluindo nome, cargo, turno e telefone.
+Clientes: Uma tabela para armazenar informações dos clientes, incluindo nome, telefone e e-mail.
+Abastecimentos: Uma tabela para registrar os abastecimentos realizados, incluindo volume, valor total e data do abastecimento.
+Serviços: Uma tabela para armazenar os serviços oferecidos pelo posto, como abastecimento e pagamento de combustíveis.
+Transações: Uma tabela para registrar as transações realizadas pelos clientes, incluindo forma de pagamento, total pago e data da transação.
+README.md
+markdown
+# Banco de Dados Posto de Gasolina  
+
+## Visão Geral  
+O Banco de Dados Posto de Gasolina é um banco de dados relacional projetado para gerenciar as operações de um posto de gasolina, incluindo combustíveis, bombas de abastecimento, funcionários, clientes, abastecimentos, serviços e transações.  
+
+## Tabelas  
+- **combustiveis**: Armazena os tipos de combustíveis e seus preços.  
+  - `id_combustivel`: Identificador único do combustível.  
+  - `tipo`: Tipo de combustível (ex: gasolina, etanol, diesel).  
+  - `preco_por_litro`: Preço por litro do combustível.  
+
+- **bombas**: Armazena informações sobre as bombas de abastecimento.  
+  - `id_bomba`: Identificador único da bomba.  
+  - `id_combustivel`: Chave estrangeira referenciando o tipo de combustível.  
+  - `descricao`: Descrição da bomba.  
+
+- **funcionarios**: Armazena informações dos funcionários do posto.  
+  - `id_funcionario`: Identificador único do funcionário.  
+  - `nome`: Nome do funcionário.  
+  - `cargo`: Cargo do funcionário.  
+  - `turno`: Turno de trabalho do funcionário.  
+  - `telefone`: Telefone do funcionário.  
+
+- **clientes**: Armazena informações dos clientes.  
+  - `id_cliente`: Identificador único do cliente.  
+  - `nome`: Nome do cliente.  
+  - `telefone`: Telefone do cliente.  
+  - `email`: E-mail do cliente.  
+
+- **abastecimentos**: Registra os abastecimentos realizados.  
+  - `id_abastecimento`: Identificador único do abastecimento.  
+  - `id_cliente`: Chave estrangeira referenciando o cliente.  
+  - `id_bomba`: Chave estrangeira referenciando a bomba utilizada.  
+  - `id_funcionario`: Chave estrangeira referenciando o funcionário que realizou o abastecimento.  
+  - `volume`: Volume abastecido em litros.  
+  - `valor_total`: Valor total do abastecimento.  
+  - `data_abastecimento`: Data e hora do abastecimento.  
+
+- **servicos**: Armazena os serviços oferecidos pelo posto.  
+  - `id_servico`: Identificador único do serviço.  
+  - `descricao`: Descrição do serviço.  
+  - `preco`: Preço do serviço.  
+
+- **transacoes**: Registra as transações realizadas pelos clientes.  
+  - `id_transacao`: Identificador único da transação.  
+  - `id_cliente`: Chave estrangeira referenciando o cliente.  
+  - `id_servico`: Chave estrangeira referenciando o serviço.  
+  - `id_abastecimento`: Chave estrangeira referenciando o abastecimento.  
+  - `forma_pagamento`: Forma de pagamento utilizada.  
+  - `total_pago`: Total pago na transação.  
+  - `data_transacao`: Data e hora da transação.  
+
+## Iniciando  
+Para configurar o banco de dados:  
+
+1. Clone o repositório:  
+   ```bash  
+   git clone <url-do-repositorio>  
+   cd PostoDeGasolina  
+Crie o banco de dados:
+
+sql
+CREATE DATABASE IF NOT EXISTS PostoDeGasolina;  
+USE PostoDeGasolina;  
+Execute os scripts SQL para criar as tabelas e inserir dados iniciais.
